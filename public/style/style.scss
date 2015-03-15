@@ -1,0 +1,49 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto:500,900italic,900,400italic,100,700italic,300,700,500italic,100italic,300italic,400&subset=latin,latin-ext);
+
+@import '../bower_components/materialize/sass/materialize';
+
+@import 'typography';
+
+body {
+	@include text('body-1');
+}
+
+section.cv-about {
+	@extend .card;
+	dl {
+		@extend .row;
+		@extend .col;
+		@extend .s12;
+		@extend .m6;
+		$col: 7em;
+		dt, dd {
+			display: inline-block;
+			vertical-align: top;
+			min-height: 2em;
+		}
+		dt {
+			width: $col;
+		}
+		dd {
+			@include text('body-2');
+			margin-left: 0;
+			width: calc(100% - #{$col});
+			ul {
+				margin: 0;
+			}
+		}
+	}
+	> div {
+		@extend .col;
+		@extend .m6;
+		@extend .hide-on-small-and-down;
+		text-align: right;
+		img {
+			@extend .responsive-img;
+			max-height: 300px;
+			position: relative;
+			left: 23px;
+			top: 3px;
+		}
+	}
+}

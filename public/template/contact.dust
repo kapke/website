@@ -1,0 +1,46 @@
+{>"index.dust"/}
+
+{<content}
+    {?message}
+        {@select key="{message}"}
+            {@eq value="success"}
+                <section class="card light-green"><p class="card-content">
+                    Message sent succesfully!
+                </p></section>
+            {/eq}
+            {@eq value="fail"}
+                <section class="card red"><p class="card-content">
+                    Sending message failed! Try again or use contact data presented below.
+                </p></section>
+            {/eq}
+        {/select}
+    {/message}
+
+    <section class="card">
+        <header class="card-title card-content black-text">Contact data</header>
+        <dl class="card-content row">
+            <dt class="col s2">Phone</dt><dd class="col s10">+48 694-545-547</dd>
+            <dt class="col s2">e-mail</dt><dd class="col s10">andrzej.kopec@kapke.eu</dd>
+        </dl>
+    </section>
+    <section class="card">
+        <header class="card-title card-content black-text">Contact form</header>
+        <form action="/contact" method="post" class="row card-content">
+            <div class="input-field col s12 m6">
+                Your name: <input name="name" type="text" required="required" class="validate" />
+            </div>
+            <div class="input-field col s12 m6">
+                Your e-mail: <input name="email" type="email" required="required" class="validate" />
+            </div>
+            <div class="input-field col s12">
+                Title: <input name="title" type="text" required="required"/>
+            </div>
+            <div class="input-field col s12">
+                Content: <textarea name="content" required="required" class="materialize-textarea"></textarea>
+            </div>
+            <div class="col s12">
+                <button class="btn right" type="submit">Submit <i class="mdi-content-send right"></i></button>
+            </div>
+        </form>
+    </section>
+{/content}

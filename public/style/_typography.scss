@@ -1,0 +1,61 @@
+$styles: (
+	'display-4': (
+		'size': 112,
+		'weight': 100
+	),
+	'display-3': (
+		'size': 56
+	),
+	'display-2': (
+		'size': 45
+	),
+	'display-1': (
+		'size': 34
+	),
+	'headline': (
+		'size': 24
+	),
+	'title': (
+		'size': 20,
+		'weight': 500
+	),
+	'subhead': (
+		'size': 16
+	),
+	'body-2': (
+		'size': 14,
+		'weight': 500
+	),
+	'body-1': (
+		'size': 14
+	),
+	'caption': (
+		'size': 12
+	),
+	'button': (
+		'size': 12,
+		'weight': 500,
+		'transform': uppercase
+	)
+);
+
+@mixin text ($name: 'body-1') {
+	$weight: 400;
+
+	$style: map-get($styles, $name);
+	$size: map-get($style, 'size');
+	@if(map-has-key($style, 'weight')) {
+		$weight: map-get($style, 'weight');
+	}
+	@if(map-has-key($style, 'transform')) {
+		text-transform: map-get($style, 'transform');
+	}
+	font-size: #{$size'px'};
+	font-weight: $weight;
+}
+
+@each $name, $style in $styles {
+	.#{$name} {
+		@include text(#{$name});
+	}
+}

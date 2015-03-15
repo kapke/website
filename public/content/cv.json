@@ -1,0 +1,82 @@
+{
+    "person": {
+        "name": "Andrzej",
+        "surname": "Kopeć",
+        "birthDate": "9.5.1992",
+        "img": "static/img/me.jpg",
+        "skills": ["Software architect", "Front-end developer", "JS developer", "PHP developer"]
+    },
+    "sections": [
+        {
+            "title": "work experience",
+            "entries": [
+                {
+                    "key": {
+                        "type": "period",
+                        "start": "2.2012",
+                        "end": "7.2013"
+                    },
+                    "value": {
+                        "type": "job",
+                        "title": "Freelancer",
+                        "job": "Full-stack developer",
+                        "technologies": ["Vanilla JS", "PHP 5.4", "CSS3", "MySQL"],
+                        "description": "As a freelancer I've created several websites and tools."
+                    }
+                },
+                {
+                    "key": {
+                        "type": "period",
+                        "start": "7.2013",
+                        "end": "6.2014"
+                    },
+                    "value": {
+                        "type": "job",
+                        "title": "EGAsoft",
+                        "job": "Full-stack developer",
+                        "technologies": ["PHP 5.2 - 5.4", "Vanilla JS", "CSS3", "SASS", "Joomla 3", "PostgreSQL 8.2 - 9.2", "Microsoft SQL Server", "C#.NET", "svn"],
+                        "description": "My major tasks was development of flyDOC (it's a intranet system written in PHP) and creating/maintaining websites."
+                    }
+                },
+                {
+                    "key": {
+                        "type": "period",
+                        "start": "6.2014",
+                        "end": "now"
+                    },
+                    "value": {
+                        "type": "job",
+                        "title": "SkyGate",
+                        "job": "Front-end/full-stack developer",
+                        "technologies": ["AngularJS", "Vanilla JS", "SASS", "node.js", "express", "parse.com", "Symfony2", "PHP 5.5", "jasmine", "git", "ansible", "vagrant", "Python"],
+                        "description": "My major task was front-end developement using newest tools and techonologies. Several times I had to create/maintain back-end written in PHP."
+                    }
+                }
+            ]
+        },
+        {
+            "title": "education",
+            "entries": [
+                {
+                    "key": {
+                        "type": "period",
+                        "start": "2012",
+                        "end": "2015"
+                    },
+                    "value": {
+                        "type": "education",
+                        "title": "Computer Science Engineer",
+                        "university": "Silesian University of Technology",
+                        "faculty": "Faculty of Applied Mathematics"
+                    }
+                }
+            ]
+        },
+        {
+            "title": "interests",
+            "entries": [
+                "road cycling", "software development & architecture", "newest web technologies"
+            ]
+        }
+    ]
+}

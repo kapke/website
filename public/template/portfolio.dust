@@ -1,0 +1,23 @@
+{>"index.dust"/}
+
+{<content}
+    <div class="row">
+    {#items}
+        <section class="card col s12 m6">
+            <header class="card-title card-content black-text"><a href="{href}">{title}</a></header>
+            <div class="card-content col s12 m6">
+                <span>Used technologies:</span>
+                <ul>
+                    {#technologies}
+                        <li>{.}</li>
+                    {/technologies}
+                </ul>
+                <p>{description}</p>
+            </div>
+            <div class="col m6">
+                <img src="{img}" alt="" class="responsive-img"/>
+            </div>
+        </section>
+    {/items}
+    </div>
+{/content}

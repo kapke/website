@@ -1,0 +1,68 @@
+{>"index.dust"/}
+
+{<content}
+    <section class="cv-about">
+        <dl>
+            <dt class="">Name</dt><dd class="">{person.name} {person.surname}</dd>
+            <dt class="">Date of birth</dt><dd class="">{person.birthDate}</dd>
+            <dt class="">Skills</dt>
+            <dd class="">
+                <ul>
+                    {#person.skills}
+                        <li>{.}</li>
+                    {/person.skills}    
+                </ul>
+                
+            </dd>
+        </dl>
+        <div><img src="{person.img}" alt="Me"/></div>
+    </section>
+    {#sections}
+        <section class="card">
+            <div class="card-content row">
+                <header class="card-title black-text col s12">
+                    <h2>{title}</h2>
+                </header>
+                <ul>
+                    {#entries}
+                        <li class="col s12">
+                            <div class="col s4">
+                                {@select key="{key.type}"}
+                                     {@eq value="period"}
+                                         {key.start} &mdash; {key.end}
+                                     {/eq}
+                                {/select}
+                            </div>
+                            <div class="col s8 right">
+                                {@select key="{value.type}"}
+                                    {@eq value="job"}
+                                        <header>
+                                            <h3>{value.title}</h3>
+                                            <span>{value.job}</span>
+                                        </header>
+                                        <span>Used technologies:</span>
+                                        <ul>
+                                            {#value.technologies}
+                                                <li>{.}</li>
+                                            {/value.technologies}
+                                        </ul>
+                                        <p>{value.description}</p>
+                                    {/eq}
+                                    {@eq value="education"}
+                                        <header>
+                                            <h3>{value.university}</h3>
+                                        </header>
+                                        <span>{value.title} @ {value.faculty}</span>
+                                    {/eq}
+                                    {@default}
+                                        <span>{.}</span>
+                                    {/default}
+                                {/select}
+                            </div>
+                        </li>
+                    {/entries}
+                </ul>
+            </div>
+        </section>
+    {/sections}
+{/content}

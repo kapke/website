@@ -1,0 +1,9 @@
+{>"index.dust"/}
+
+{<content}
+    <article class="card">
+        <div class="card-content">
+            {content|s}
+        </div>
+    </article>
+{/content}

@@ -1,0 +1,31 @@
+[
+    {
+        "slug": "per-sonda-ad-astra",
+        "title": "Per sonda ad astra",
+        "technologies": [
+            "Vanilla JS",
+            "CSS3"
+        ],
+        "description": "Interactive model of Solar System created with Vanilla JS. It have not been done yet so it's still pretty buggy and has missing images/videos"
+    },
+    {
+        "slug": "bewp",
+        "href": "http://bewp.pl",
+        "title": "BEWP",
+        "technologies": [
+            "PHP",
+            "Vanilla JS",
+            "MySQL"
+        ],
+        "description": "Website created for BEWP"
+    },
+    {
+        "slug": "cashflow",
+        "title": "Cashflow interactive card",
+        "technologies": [
+            "Vanilla JS",
+            "jQuery"
+        ],
+        "description": "It's interactive player's card for Cashflow game. Created in vanilla Js (jQuery was used only for animations)."
+    }
+]
